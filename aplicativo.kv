@@ -1,0 +1,40 @@
+<Gerenciador>:
+	Menu:
+		name: 'menu'
+	Sala:
+		name: 'sala'
+
+
+	
+<Menu>:
+	BoxLayout:
+		orientation: 'vertical'
+		padding: 50
+		spacing: 30
+		Button:
+			text: 'Sala'
+			on_release: app.root.current = 'sala'
+		Button:
+			text: 'Quarto'
+		Button:
+			text: 'Cozinha'
+		Button:
+			text: 'Quarto2'
+
+<Sala>:
+	BoxLayout:
+		id: quadro_geral
+		orientation: 'vertical'
+		spacing: 30
+		BoxLayout:
+			id: quadro_luz
+			orientation: 'horizontal'
+			padding: 50
+			Button:
+				text: 'Luz'
+				on_release: 
+					if sala_luz.text == 'On': sala_luz.text = 'Off'
+					else: sala_luz.text = 'On'
+			Label:
+				id: sala_luz
+				text: 'On'
