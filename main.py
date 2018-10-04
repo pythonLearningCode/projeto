@@ -15,6 +15,8 @@ class Sala(Screen):
 
 
 class Aplicativo(App):
+
+	def onOff(self, lab):
 	def build(self):
 		return Gerenciador()
 
